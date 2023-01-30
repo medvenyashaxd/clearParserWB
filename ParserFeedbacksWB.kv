@@ -1,0 +1,37 @@
+ScrollView:
+    do_scroll_x:False
+    do_scroll_y:True
+
+    MDBoxLayout:
+        spacing: 20
+        orientation: 'vertical'
+        size_hint_y: None
+        height: self.minimum_height
+
+        MDLabel:
+
+        MDLabel:
+            halign: 'center'
+            text: "Парсер отзывов Wildberries"
+
+        MDTextField:
+            id: text1
+            mode: 'fill'
+            multiline: True
+            hint_text: "ID (артикул) товара WB:"
+            font_size: '20sp'
+
+        MDTextField:
+            id: text2
+            mode: 'fill'
+            multiline: True
+            hint_text: "Код товара на сайте SB:"
+            font_size: '20sp'
+
+        MDRaisedButton:
+            text: "Начать"
+            md_bg_color: "green"
+            pos_hint: {'center_x': 0.5}
+            on_release:
+                app.get_input_data('')
+
